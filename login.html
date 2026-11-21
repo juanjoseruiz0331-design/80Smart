@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>80 SMART — Iniciar sesión</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="topbar" style="justify-content: space-between;">
+    <div class="brand">
+      <div class="logo"><img src="img/logo-la80.png" alt="Logo 80 SMART"></div>
+      <div>
+        <h1><a href="index.html">80 SMART</a></h1>
+        <span>Plataforma Operativa Multi-Sede</span>
+      </div>
+    </div>
+
+    <button class="btn sm menu-toggle" id="menuToggle" type="button">Menú</button>
+
+    <nav id="menuPrincipal" aria-label="Menú principal">
+      <ul class="row" style="list-style:none; margin:0; padding:0; gap:8px;">
+        <li><a class="nav-link-top" href="index.html">Centro de operaciones</a></li>
+        <li><a class="nav-link-top" href="index.html#sedes">Sedes</a></li>
+        <li><a class="nav-link-top" href="contacto.html">Soporte</a></li>
+        <li><a class="nav-link-top active" href="login.html">Iniciar sesión</a></li>
+        <li><a class="btn sm primary" href="sistema.html">Sistema 80 SMART</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="auth" style="min-height: calc(100vh - 120px);">
+    <div class="auth-stage" id="authCard">
+      <!-- COLUMNA IZQUIERDA: FORMULARIO INICIAR SESIÓN -->
+      <section class="auth-pane auth-pane-login" aria-label="Formulario de inicio de sesión">
+        <div class="auth-pane-inner">
+          <div class="auth-brand-mini">
+            <div class="logo" style="width: 30px; height: 30px;"><img src="img/logo-la80.png" alt="80 SMART"></div>
+            <span>80 SMART</span>
+          </div>
+
+          <h2 class="auth-title">Iniciar sesión</h2>
+
+          <form id="formLogin" class="auth-form-stack" novalidate>
+            <div class="auth-line-field">
+              <div class="auth-line-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input class="auth-line-input" type="email" id="correoLogin" name="correo" placeholder="Correo electrónico" aria-label="Correo electrónico" autocomplete="username" required>
+              </div>
+              <p class="error-campo" id="errorCorreo"></p>
+            </div>
+
+            <div class="auth-line-field">
+              <div class="auth-line-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <input class="auth-line-input" type="password" id="claveLogin" name="clave" placeholder="Contraseña" aria-label="Contraseña" minlength="6" autocomplete="current-password" required>
+              </div>
+              <p class="error-campo" id="errorClave"></p>
+            </div>
+
+            <p id="mensajeLogin" class="mensaje-form" role="alert"></p>
+
+            <button type="submit" class="auth-pill-primary">Ingresar</button>
+
+            <div class="auth-foot-links">
+              <a href="sistema.html#/forgot" class="muted">¿Olvidaste tu contraseña?</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- PANEL DIAGONAL DE VIDRIO EXCLUSIVO PARA 80 SMART -->
+      <aside class="auth-overlay-track" aria-hidden="false">
+        <div class="auth-overlay-panel">
+          <div class="auth-overlay-copy auth-copy-login">
+            <h2>¡HOLA,<br>BIENVENIDO!</h2>
+            <p>Acceso exclusivo para personal autorizado de <strong>80 SMART</strong>. Gestiona inventario FEFO, compras, ventas y cajas en nuestras 5 sedes.</p>
+            <span class="small muted">Los usuarios son administrados internamente por 80 SMART.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="side-foot center">
+    <p><strong>80 SMART</strong> — Plataforma Operativa Multi-Sede · © 2026</p>
+    <nav aria-label="Enlaces del pie de página">
+      <ul class="footer-links">
+        <li><a href="index.html">Centro de operaciones</a></li>
+        <li><a href="contacto.html">Soporte</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="sistema.html">Sistema 80 SMART</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

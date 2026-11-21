@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>80 SMART · Centro de Operaciones Multi-Sede</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="topbar" style="justify-content: space-between;">
+    <div class="brand">
+      <div class="logo"><img src="img/logo-la80.png" alt="Logo oficial 80 SMART"></div>
+      <div>
+        <h1><a href="index.html">80 SMART</a></h1>
+        <span>Centro de Operaciones · Plataforma Multi-Sede</span>
+      </div>
+    </div>
+
+    <button class="btn sm menu-toggle" id="menuToggle" type="button">Menú</button>
+
+    <nav id="menuPrincipal" aria-label="Navegación principal">
+      <ul class="row" style="list-style:none; margin:0; padding:0; gap:6px; flex-wrap:wrap;">
+        <li><a class="nav-link-top active" href="index.html">Centro de operaciones</a></li>
+        <li><a class="nav-link-top" href="#areas">Áreas operativas</a></li>
+        <li><a class="nav-link-top" href="#sedes">Sedes autorizadas</a></li>
+        <li><a class="nav-link-top" href="contacto.html">Soporte</a></li>
+        <li><a class="nav-link-top" href="login.html">Iniciar sesión</a></li>
+        <li><a class="btn sm primary" href="sistema.html">Abrir plataforma 80 SMART</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <!-- ==================== 1. CENTRO DE OPERACIONES ==================== -->
+    <section class="hero-panel" id="inicio">
+      <div class="hero-grid">
+        <div class="stack" style="gap: 16px;">
+          <div class="row wrap" style="gap: 8px;">
+            <span class="badge primary">80 SMART · Centro de Operaciones</span>
+            <span class="badge ok">Arquitectura Multi-Sede · 5 Locales</span>
+          </div>
+
+          <div>
+            <h2>Plataforma Operativa 80 SMART</h2>
+            <p class="hero-slogan">Control centralizado de inventario FEFO, compras, ventas, cajas, transferencias y auditoría.</p>
+          </div>
+
+          <p class="muted" style="max-width: 640px; font-size: 14.5px; line-height: 1.65; margin: 0;">
+            Accede al panel administrativo y al punto de venta con aislamiento multi-sede, roles y permisos verificados por sede, existencias independientes y trazabilidad completa de movimientos.
+          </p>
+
+          <div class="row wrap" style="gap: 10px; padding-top: 4px;">
+            <a class="btn primary" href="login.html">Iniciar sesión corporativa</a>
+            <a class="btn" href="sistema.html">Entrar al sistema local</a>
+            <a class="btn" href="#sedes">Ver sedes configuradas</a>
+          </div>
+        </div>
+
+        <aside class="hero-logo-box">
+          <img src="img/logo-la80.png" alt="Identidad 80 SMART">
+          <div class="stack" style="gap: 4px;">
+            <strong style="font-size: 16px; color: var(--text);">Entorno Empresarial Unificado</strong>
+            <span class="small muted">Una empresa · 5 sedes · Base de datos centralizada</span>
+          </div>
+          <div class="hero-fresh-badges">
+            <span>Inventario FEFO</span>
+            <span>Punto de Venta</span>
+            <span>Auditoría Inmutable</span>
+            <span>Seguridad RBAC</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== 2. ÁREAS OPERATIVAS ==================== -->
+    <section id="areas" style="margin-bottom: 28px;">
+      <div class="page-head">
+        <div>
+          <span class="badge primary" style="margin-bottom: 6px;">Módulos Administrativos</span>
+          <h2 style="font-size: 22px;">Áreas Operativas de la Plataforma</h2>
+          <p>El módulo administrativo de Productos permanece disponible dentro de la navegación interna del sistema.</p>
+        </div>
+        <a class="btn sm primary" href="sistema.html">Abrir panel administrativo →</a>
+      </div>
+
+      <div class="grid g3">
+        <article class="card stack" style="gap: 10px;">
+          <span class="badge primary" style="width: fit-content;">Inventario &amp; FEFO</span>
+          <h3 style="font-size: 17px; margin: 0;">Existencias, lotes y transferencias</h3>
+          <p class="muted" style="margin: 0; line-height: 1.6;">
+            Control independiente de existencias por sede, salidas por vencimiento FEFO, conteos físicos y traslados auditables.
+          </p>
+        </article>
+
+        <article class="card stack" style="gap: 10px;">
+          <span class="badge ok" style="width: fit-content;">Ventas &amp; Cajas</span>
+          <h3 style="font-size: 17px; margin: 0;">Punto de venta y facturación</h3>
+          <p class="muted" style="margin: 0; line-height: 1.6;">
+            Operación de caja con lector de códigos de barras, importes decimales exactos, protección contra duplicados y arqueo.
+          </p>
+        </article>
+
+        <article class="card stack" style="gap: 10px;">
+          <span class="badge info" style="width: fit-content;">Compras &amp; Seguridad</span>
+          <h3 style="font-size: 17px; margin: 0;">Proveedores, reportes y auditoría</h3>
+          <p class="muted" style="margin: 0; line-height: 1.6;">
+            Órdenes de compra, recepción con costo promedio ponderado, analítica real y control de acceso por rol y sede.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SEDES AUTORIZADAS (5 LOCALES) ==================== -->
+    <section id="sedes" style="margin-bottom: 28px;">
+      <div class="page-head">
+        <div>
+          <span class="badge primary" style="margin-bottom: 6px;">Arquitectura Multi-Sede</span>
+          <h2 style="font-size: 22px;">Sedes Configuradas</h2>
+          <p>Nombres y códigos configurables desde el módulo administrativo de Configuración.</p>
+        </div>
+      </div>
+
+      <div class="grid g3">
+        <article class="card sede-card">
+          <div class="row between">
+            <span class="badge primary">MORA</span>
+            <span class="badge ok">Medellín</span>
+          </div>
+          <h3>Sede Moravia</h3>
+          <div class="sede-address">Calle 80B #54B-27, Medellín</div>
+        </article>
+
+        <article class="card sede-card">
+          <div class="row between">
+            <span class="badge primary">ARAL</span>
+            <span class="badge ok">Medellín</span>
+          </div>
+          <h3>Sede Aranjuez Álamos</h3>
+          <div class="sede-address">Carrera 52 #87-03, Medellín</div>
+        </article>
+
+        <article class="card sede-card">
+          <div class="row between">
+            <span class="badge primary">ARPA</span>
+            <span class="badge ok">Medellín</span>
+          </div>
+          <h3>Sede Aranjuez Parque</h3>
+          <div class="sede-address">Carrera 48 #93-112, Medellín</div>
+        </article>
+
+        <article class="card sede-card">
+          <div class="row between">
+            <span class="badge info">BECA</span>
+            <span class="badge ok">Bello</span>
+          </div>
+          <h3>Sede Bello Cabañas</h3>
+          <div class="sede-address">Carrera 51 #25-57, local 101, Bello</div>
+        </article>
+
+        <article class="card sede-card">
+          <div class="row between">
+            <span class="badge ok">RION</span>
+            <span class="badge ok">Oriente Antioqueño</span>
+          </div>
+          <h3>Sede Rionegro</h3>
+          <div class="sede-address">Carrera 39A #56-78, Rionegro</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="side-foot center">
+    <p style="margin: 0 0 8px;"><strong>80 SMART</strong> — Plataforma Empresarial de Gestión Multi-Sede · © 2026</p>
+    <nav aria-label="Enlaces del pie de página">
+      <ul class="footer-links">
+        <li><a href="index.html">Centro de operaciones</a></li>
+        <li><a href="#sedes">Sedes</a></li>
+        <li><a href="contacto.html">Soporte</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="sistema.html">Sistema 80 SMART</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

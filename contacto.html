@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supermercados La 80 | 80 SMART — Contacto, Domicilios y Sedes</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="topbar" style="justify-content: space-between;">
+    <div class="brand">
+      <div class="logo"><img src="img/logo-la80.png" alt="Logo 80 SMART"></div>
+      <div>
+        <h1><a href="index.html">80 SMART</a></h1>
+        <span>Soporte y Sedes</span>
+      </div>
+    </div>
+
+    <button class="btn sm menu-toggle" id="menuToggle" type="button">Menú</button>
+
+    <nav id="menuPrincipal" aria-label="Menú principal">
+      <ul class="row" style="list-style:none; margin:0; padding:0; gap:8px;">
+        <li><a class="nav-link-top" href="index.html">Centro de operaciones</a></li>
+        <li><a class="nav-link-top" href="index.html#sedes">Sedes</a></li>
+        <li><a class="nav-link-top active" href="contacto.html">Soporte</a></li>
+        <li><a class="nav-link-top" href="login.html">Iniciar sesión</a></li>
+        <li><a class="btn sm primary" href="sistema.html">Sistema 80 SMART</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="grid g2" style="align-items: start; max-width: 1120px; margin: 16px auto;">
+      <article class="card stack" style="gap: 16px; padding: 24px;">
+        <span class="badge primary" style="width: fit-content;">Canales Oficiales Verificados</span>
+        <h2 style="font-size: 24px; font-weight: 800; margin: 0;">Supermercados La 80 · Domicilios y Atención</h2>
+        <p class="muted" style="margin: 0;">
+          Comunícate con nuestras líneas oficiales de domicilios y servicio al cliente, o visita cualquiera de nuestras 5 sedes en Medellín, Bello y Rionegro.
+        </p>
+
+        <dl class="dl" style="margin-top: 6px;">
+          <dt>Domicilios</dt>
+          <dd><a href="tel:+576046052616">(604) 605 2616, opción 2</a></dd>
+          <dt>Celular 1</dt>
+          <dd><a href="tel:+573023985194">302 398 5194</a></dd>
+          <dt>Celular 2</dt>
+          <dd><a href="tel:+573006841713">300 684 1713</a></dd>
+          <dt>Página oficial</dt>
+          <dd><a href="https://www.supermercadosla80.com/" target="_blank" rel="noopener noreferrer">https://www.supermercadosla80.com/</a></dd>
+          <dt>Sede Moravia</dt>
+          <dd>Calle 80B #54B-27, Medellín</dd>
+          <dt>Sede Aranjuez Álamos</dt>
+          <dd>Carrera 52 #87-03, Medellín</dd>
+          <dt>Sede Aranjuez Parque</dt>
+          <dd>Carrera 48 #93-112, Medellín</dd>
+          <dt>Sede Bello, Cabañas</dt>
+          <dd>Carrera 51 #25-57, local 101, Bello</dd>
+          <dt>Sede Rionegro</dt>
+          <dd>Carrera 39A #56-78, Rionegro</dd>
+        </dl>
+
+        <div class="row wrap" style="gap: 8px;">
+          <a class="social-pill" href="https://www.instagram.com/supermercadosla80/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="social-pill" href="https://www.facebook.com/SupermercadosLa80" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="social-pill" href="https://www.tiktok.com/@supermercadosla80" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </div>
+
+        <div class="banner info" style="margin-bottom: 0;">
+          <span>¿Quieres ingresar al sistema administrativo y POS? Entra a <a href="sistema.html"><strong>80 SMART en vivo</strong></a>.</span>
+        </div>
+      </article>
+
+      <section aria-label="Formulario de contacto">
+        <form id="formContacto" class="card stack" style="gap: 14px; padding: 24px;" novalidate>
+          <div>
+            <h2 style="font-size: 20px; font-weight: 700;">Escríbenos</h2>
+            <p class="muted" style="margin-top: 4px;">Completa tus datos para soporte de 80 SMART o atención comercial.</p>
+          </div>
+
+          <div class="field">
+            <label for="nombreContacto">Nombre completo</label>
+            <input class="input" type="text" id="nombreContacto" name="nombre" placeholder="Ej. Juan Pérez" required>
+            <p class="error-campo" id="errorNombreContacto"></p>
+          </div>
+
+          <div class="field">
+            <label for="correoContacto">Correo electrónico</label>
+            <input class="input" type="email" id="correoContacto" name="correo" placeholder="nombre@empresa.com" required>
+            <p class="error-campo" id="errorCorreoContacto"></p>
+          </div>
+
+          <div class="field">
+            <label for="asuntoContacto">Motivo de consulta</label>
+            <select class="select" id="asuntoContacto" name="asunto" required>
+              <option value="">Selecciona un motivo…</option>
+              <option value="domicilios">Atención al cliente y domicilios</option>
+              <option value="cotizacion">Cotización o soporte 80 SMART POS/ERP</option>
+              <option value="proveedores">Contacto de proveedores</option>
+              <option value="otro">Otro requerimiento</option>
+            </select>
+            <p class="error-campo" id="errorAsuntoContacto"></p>
+          </div>
+
+          <div class="field">
+            <label for="mensajeContactoTxt">Mensaje</label>
+            <textarea class="input" id="mensajeContactoTxt" name="mensaje" rows="5" placeholder="Escribe tu mensaje o requerimiento (mínimo 10 caracteres)…" required></textarea>
+            <p class="error-campo" id="errorMensajeContacto"></p>
+          </div>
+
+          <p id="mensajeContacto" class="mensaje-form" role="alert"></p>
+
+          <button type="submit" class="btn primary" style="height: 42px; width: 100%;">Enviar mensaje</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="side-foot center">
+    <p><strong>Supermercados La 80 · 80 SMART</strong> — «Somos la mejor decisión al momento de mercar» · © 2026 Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces del pie de página">
+      <ul class="footer-links">
+        <li><a href="index.html">Centro de operaciones</a></li>
+        <li><a href="contacto.html">Soporte</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="sistema.html">Sistema 80 SMART</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

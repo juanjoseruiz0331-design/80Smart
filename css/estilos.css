@@ -1,0 +1,282 @@
+/*
+ * 80 SMART — Hoja de estilos del portal operativo y acceso corporativo.
+ * Comparte la base visual unificada de app.css.
+ */
+@import url('app.css');
+
+/* ---------- Header principal ---------- */
+header.topbar {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 28px;
+}
+
+.brand h1 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.brand h1 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand h1 a:hover {
+  color: var(--primary-strong);
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+#menuPrincipal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nav-link-top {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 13px;
+  border-radius: 10px;
+  color: var(--text-2);
+  font-weight: 550;
+  font-size: 13.5px;
+  border: 1px solid transparent;
+  transition: all 160ms ease;
+}
+
+.nav-link-top:hover {
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-link-top.active {
+  background: var(--primary-soft);
+  border-color: rgba(52, 211, 153, 0.32);
+  color: var(--primary-strong);
+}
+
+.carrito {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carrito .badge {
+  background: rgba(3, 23, 15, 0.35);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: inherit;
+  height: 20px;
+  padding: 0 7px;
+}
+
+/* ---------- Portada Principal ---------- */
+.hero-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 28px;
+  align-items: center;
+  padding: 40px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(13, 36, 28, 0.72) 0%, rgba(5, 15, 11, 0.84) 100%);
+  backdrop-filter: blur(26px) saturate(150%);
+  -webkit-backdrop-filter: blur(26px) saturate(150%);
+  border: 1px solid var(--border-strong);
+  box-shadow:
+    inset 0 1px 0 rgba(167, 243, 208, 0.2),
+    0 36px 90px -20px rgba(0, 0, 0, 0.92);
+  margin-bottom: 32px;
+  overflow: hidden;
+  animation: panel-enter 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(167, 243, 208, 0.08) 0%, rgba(167, 243, 208, 0.01) 42%, transparent 62%);
+}
+
+.hero-panel h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-top: 14px;
+}
+
+.hero-slogan {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 750;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #6ee7b7 0%, #ffffff 50%, #fdba74 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(22px);
+}
+
+.hero-logo-box > img {
+  width: 88px;
+  height: auto;
+  max-height: 72px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+.hero-logo-frame {
+  width: 210px;
+  height: 146px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 44px -14px rgba(0, 0, 0, 0.8);
+}
+
+.hero-logo-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- Sedes, Contacto y Footer ---------- */
+.sede-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.social-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  transition: all 180ms ease;
+}
+
+.social-pill:hover {
+  border-color: rgba(52, 211, 153, 0.45);
+  background: rgba(16, 185, 129, 0.1);
+  text-decoration: none;
+  transform: translateX(3px);
+}
+
+.mensaje-form {
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.mensaje-form.exito {
+  padding: 10px 12px;
+  background: var(--ok-soft);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: var(--ok);
+}
+
+.mensaje-form.error {
+  padding: 10px 12px;
+  background: var(--danger-soft);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  color: var(--danger);
+}
+
+.error-campo {
+  color: var(--danger);
+  font-size: 12px;
+  min-height: 16px;
+  margin: 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.1fr 1.1fr;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hero-panel { grid-template-columns: 1fr; padding: 26px; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pasos-compra { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: inline-flex; }
+  #menuPrincipal {
+    display: none;
+    width: 100%;
+    order: 4;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  #menuPrincipal.activo, #menuPrincipal.abierto {
+    display: block;
+  }
+  #menuPrincipal ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-link-top { width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
